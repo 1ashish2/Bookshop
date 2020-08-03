@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<script type='text/javascript' src='http://code.jquery.com/jquery-1.10.1.js'></script>-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <style>
+        .table {
+            width: 80%;
+            font-size: 10px;
+            background-color: white;
+            overflow: hidden;
+        }
+
+        .table {
+            counter-reset: serial-number;
+        }
+
+        .table td:first-child::before {
+            counter-increment: serial-number;
+            content: counter(serial-number);
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .img {
+            width: 100px;
+            height: 50px;
+        }
+
+        .shopping {
+            text-align: center;
+        }
+    </style>
+    <script>
+        function myFunctions() {
+            document.getElementById("del").deleteRow(0);
+        }
+        function add() {
+            var a, b, c;
+            a = Number(document.getElementById("first").innerHTML);
+            b = Number(document.getElementById("second").innerHTML);
+            c = a + b;
+            document.getElementById("answer").value = c;
+        }
+    </script>
+    <title>Cart</title>
+</head>
+
+<body>
+    <button type="button" class="bt btn-success" style="background-color: green;" data-toggle="modal"
+        data-target="#myModal">
+        Buy Now
+    </button>
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: black;height:20%;">
+                    <img src="logo.png" alt="logo">
+                        <h2 class="modaltitle text-white">My Shopping Cart</h2>
+                        <button type="button" class="close text-danger" data-dismiss="modal">×</button>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <thead>
+
+
+                            <tr>
+                                <th>Sr.#</th>
+
+                                <th>Item Description</th>
+                                <th>Item Price</th>
+                                <th>Cancel</th>
+                            </tr>
+                        </thead>
+                        <tbody id="del">
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <img src="11.jpg" alt="image">
+                                </td>
+                                <td><input id="first" style="border: white;"></td>
+                                <td><button class="btn btn-danger" onclick="myFunctions()">x</button></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <img src="12.jpg" alt="img">
+                                </td>
+                                <td><input id="second" style="border: white;"></td>
+                                <td><button class="btn btn-danger" onclick="myFunctions()">x</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="shopping">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="text-danger">
+                                        Amount to be Paid:<button onclick="add()"
+                                            style="visibility: hidden;">Add</button>
+                                        <input id="answer" style="border: none;">
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-success">Ships within 3-4 days.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Place Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

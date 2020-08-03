@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title>wishlist</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        #h33 {
+            margin-left: 10px;
+        }
+
+        tt {
+            /* font-weight: 600; */
+            font-size: large;
+    
+        }
+
+        #rmv {
+            float: right;
+            margin-bottom: 20px;
+
+        }
+
+        #buy {
+            float: right;
+            margin-bottom: 20px;
+
+        }
+    </style>
+   
+</head>
+
+<body>
+    <div class="container-fluid" style="border: 1px solid red; ">
+        <div class="container-fluid" style="background-color: azure;">
+            <h3 id="h33" style="font-family: Lucida Sans Typewriter;">My wishlist</h3>
+            <blockquote class="blockquote">
+                <footer class="blockquote-footer">To add more in your Wishlist <a href="https://www.w3schools.com/"
+                        class="alert-link" style="color:grey;">click here.</a></footer>
+            </blockquote>
+            <hr>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div  class="col-sm-2">
+                    <img image-fluid" src="https://www.robinsharma.com/files/img/book/9156802291265ef1ee1f6720f3ab8bc0.png" alt="Book" id="book_img1" style="height: 180px; width: 60%; margin-top: 20px; margin-left:20px ;">
+
+                </div>
+                    
+                <div class="col-sm-5" style="margin-top: 20px;">
+                    <strong> The 5 A.M Club : Own Your Morning Elevate your Life.</strong><br>
+                    <p  style="font-family: Lucida Sans Typewriter;">Author:Robin Sharma</p><br>
+                    <p  style="font-family: Lucida Sans Typewriter;">Publisher:By Jaico Publishing House</p><br>
+                    <br>
+                    <div class="container-fluid">
+                        <!-- <p style="font-family: strike;">Rs 545/</p><br> -->
+                        Rs 180/ only.
+                        <p style="float: right; padding-top: 10px;">Binding:Paperback <br> Release: August 04, 2013</p>
+                    </div>
+
+                    <br><br>
+                    <input type="checkbox" id="select">Select
+                    <div>
+                    </div>
+                </div>
+                <div class="col-sm-5" style="height: 270px; margin-top: 20px;">
+                    <strong>Available</strong><br>
+                    <pre>
+Order now and get it in 3-4 Days
+Rs.39 shipping in India per item and low cost Worldwide.</pre><br>
+                    <button class="btn btn-outline-danger">Buy Now</button>
+                    <button class="btn btn-outline-dark">Remove </button>
+
+                </div>
+            </div>
+            <hr>
+            <div class="container-fluid" style="height: 45px;margin-bottom: 10px;">
+                <button class="btn btn-outline-dark" id="rmv">Remove Selected</button>
+                <button class="btn btn-outline-primary " id="buy">Buy Selected</button>
+            </div>
+        </div>
+</body>
+
+</html>
